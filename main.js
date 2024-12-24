@@ -20,12 +20,12 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const coinGeometry = new THREE.CylinderGeometry(1, 1, 0.1, 64);
 // 加载纹理
 const textureLoader = new THREE.TextureLoader();
-const coinTexture = textureLoader.load('image.jpg');
+const coinTexture = textureLoader.load('image-2.jpg');
 // 创建纪念币材质
 const coinMaterial = new THREE.MeshStandardMaterial({
   map: coinTexture,        // 纹理贴图，使用加载的纪念币纹理
-  metalness: 0.3,          // 金属度，0.8表示较高的金属感
-  roughness: 0.2,          // 粗糙度，0.2表示较光滑的表面
+  metalness: 0,          // 金属度，0.8表示较高的金属感
+  roughness: 0.4,          // 粗糙度，0.2表示较光滑的表面
   side: THREE.DoubleSide   // 双面渲染，使纪念币的正反面都可见
 });
 // 创建纪念币网格
